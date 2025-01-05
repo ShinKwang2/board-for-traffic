@@ -11,6 +11,8 @@ import shin.board.article.service.response.ArticlePageResponse;
 import shin.board.article.service.response.ArticleResponse;
 import shin.board.common.snowflake.Snowflake;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @Service
 public class ArticleService {
@@ -53,6 +55,15 @@ public class ArticleService {
                         PageLimitCalculator.calculatePageLimit(page, pageSize, 10L)
                 )
         );
+    }
+
+    public List<ArticleResponse> readAllInfiniteScroll(Long boardId, Long pageSize, Long lastArticleId) {
+        List<Article> articles = lastArticleId == null ?
+                articleRepository.findAllInfiniteScroll(boardId, pageSize) :
+                articleRepository.findAllInfiniteScroll(boardId, pageSize, lastArticleId);
+        return articles.stream()
+                .map(ArticleResponse::from)
+                .toList(); // Since Java 16
     }
 
 }
