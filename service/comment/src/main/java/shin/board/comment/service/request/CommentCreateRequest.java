@@ -9,6 +9,6 @@ public class CommentCreateRequest {
 
     private Long articleId;
     private String content;
-    private Long parentCommitId;
+    private Long parentCommentId;
     private Long writerId;
 }

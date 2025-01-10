@@ -11,9 +11,8 @@ import shin.board.comment.service.response.CommentResponse;
 import shin.board.common.snowflake.Snowflake;
 
 import java.util.List;
-import java.util.function.Predicate;
 
-import static java.util.function.Predicate.*;
+import static java.util.function.Predicate.not;
 
 @RequiredArgsConstructor
 @Service
@@ -38,7 +37,7 @@ public class CommentService {
     }
 
     private Comment findParent(CommentCreateRequest request) {
-        Long parentCommentId = request.getParentCommitId();
+        Long parentCommentId = request.getParentCommentId();
         if (parentCommentId == null) {
             return null;
         }
