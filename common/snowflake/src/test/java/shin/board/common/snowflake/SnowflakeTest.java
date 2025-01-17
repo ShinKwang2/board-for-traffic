@@ -1,7 +1,6 @@
-package shin.board.common.snowflake.snowflake;
+package shin.board.common.snowflake;
 
 import org.junit.jupiter.api.Test;
-import shin.board.common.snowflake.Snowflake;
 
 import java.util.ArrayList;
 import java.util.List;
