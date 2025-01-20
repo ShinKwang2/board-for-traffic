@@ -2,6 +2,10 @@ rootProject.name = 'shin-board'
 
 include 'common'
 include 'common:snowflake'
+include 'common:event'
+include 'common:data-serializer'
+include 'common:outbox-message-relay'
+
 include 'service'
 include 'service:article'
 include 'service:comment'
