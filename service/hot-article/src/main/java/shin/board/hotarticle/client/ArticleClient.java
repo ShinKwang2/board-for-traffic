@@ -28,7 +28,7 @@ public class ArticleClient {
     public ArticleResponse read(Long articleId) {
         try {
             return restClient.get()
-                    .uri("/v1/articles{articleId}", articleId)
+                    .uri("/v1/articles/{articleId}", articleId)
                     .retrieve()
                     .body(ArticleResponse.class);
         } catch (Exception e) {

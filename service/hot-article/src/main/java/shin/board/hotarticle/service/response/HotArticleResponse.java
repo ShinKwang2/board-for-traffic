@@ -1,10 +1,12 @@
 package shin.board.hotarticle.service.response;
 
 import lombok.Getter;
+import lombok.ToString;
 import shin.board.hotarticle.client.ArticleClient;
 
 import java.time.LocalDateTime;
 
+@ToString
 @Getter
 public class HotArticleResponse {
 

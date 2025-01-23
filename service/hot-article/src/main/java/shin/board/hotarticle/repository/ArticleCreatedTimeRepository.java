@@ -39,7 +39,7 @@ public class ArticleCreatedTimeRepository {
             return null;
         }
         return LocalDateTime.ofInstant(
-                Instant.ofEpochSecond(Long.valueOf(result)),
+                Instant.ofEpochMilli(Long.valueOf(result)),
                 ZoneOffset.UTC
         );
     }

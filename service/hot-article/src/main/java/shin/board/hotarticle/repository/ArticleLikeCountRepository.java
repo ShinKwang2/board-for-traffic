@@ -13,7 +13,7 @@ public class ArticleLikeCountRepository {
     private final StringRedisTemplate redisTemplate;
 
     // hot-article::article::{articleId}::like-count
-    private final String KEY_FORMAT = "hot-article::article::{articleId}::like-count";
+    private final String KEY_FORMAT = "hot-article::article::%s::like-count";
 
     public void createOrUpdate(Long articleId, Long likeCount, Duration ttl) {
         redisTemplate.opsForValue().set(generateKey(articleId), String.valueOf(likeCount), ttl);
