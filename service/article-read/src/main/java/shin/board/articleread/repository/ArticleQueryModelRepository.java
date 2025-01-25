@@ -26,7 +26,6 @@ public class ArticleQueryModelRepository {
     public void update(ArticleQueryModel articleQueryModel) {
         redisTemplate.opsForValue()
                 .setIfPresent(generateKey(articleQueryModel), DataSerializer.serialize(articleQueryModel));
-        );
     }
 
     public void delete(Long articleId) {
