@@ -18,10 +18,10 @@ spring:
 
 endpoints:
   shin-board-article-service:
-    url: http://127:0.0.1:9000
+    url: http://127.0.0.1:9000
   shin-board-comment-service:
-    url: http://127:0.0.1:9001
+    url: http://127.0.0.1:9001
   shin-board-like-service:
-    url: http://127:0.0.1:9002
+    url: http://127.0.0.1:9002
   shin-board-view-service:
-    url: http://127:0.0.1:9003
+    url: http://127.0.0.1:9003
