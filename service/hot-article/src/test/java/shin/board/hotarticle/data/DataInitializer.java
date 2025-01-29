@@ -20,7 +20,7 @@ public class DataInitializer {
             Long articleId = createArticle();
             long commentCount = RandomGenerator.getDefault().nextLong(3);
             long likeCount = RandomGenerator.getDefault().nextLong(3);
-            long viewCount = RandomGenerator.getDefault().nextLong(100);
+            long viewCount = RandomGenerator.getDefault().nextLong(200);
 
             createComment(articleId, commentCount);
             like(articleId, likeCount);

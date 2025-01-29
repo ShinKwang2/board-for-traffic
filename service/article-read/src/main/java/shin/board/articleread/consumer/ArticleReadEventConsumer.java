@@ -20,7 +20,7 @@ public class ArticleReadEventConsumer {
     @KafkaListener(topics = {
             EventType.Topic.SHIN_BOARD_ARTICLE,
             EventType.Topic.SHIN_BOARD_COMMENT,
-            EventType.Topic.SHIN_BOARD_LIKE,
+            EventType.Topic.SHIN_BOARD_LIKE
     })
     public void listen(String message, Acknowledgment ack) {
         log.info("[ArticleReadEventConsumer.listen] message={}", message);
