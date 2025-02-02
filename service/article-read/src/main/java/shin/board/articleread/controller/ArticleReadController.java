@@ -37,6 +37,6 @@ public class ArticleReadController {
             @RequestParam(value = "lastArticleId", required = false) Long lastArticleId,
             @RequestParam("pageSize") Long pageSize
     ) {
-        return articleReadService.readAllInfiniteScroll(boardId, lastArticleId, pageSize)
+        return articleReadService.readAllInfiniteScroll(boardId, lastArticleId, pageSize);
     }
 }
